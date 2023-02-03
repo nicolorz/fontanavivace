@@ -7,11 +7,10 @@ const Header = () => {
         <header className="Header">
             <img src={MainLogo} alt="Main Logo" />
             <ul>
-                <li><a href="#">Chi siamo</a></li>
-                <li><a href="#">La casa famiglia</a></li>
-                <li><a href="#">Progetti</a></li>
-                <li><a href="#">Contatti</a></li>
-                
+                <li>Chi siamo</li>
+                <li>La casa famiglia</li>
+                <li>Progetti</li>
+                <li>Contatti</li>
             </ul>
         </header>
     )
