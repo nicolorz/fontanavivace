@@ -11,7 +11,6 @@ const Header = () => {
                 <li><a href="#">La casa famiglia</a></li>
                 <li><a href="#">Progetti</a></li>
                 <li><a href="#">Contatti</a></li>
-                <li><a href="#">Blog</a></li>
                 
             </ul>
         </header>
