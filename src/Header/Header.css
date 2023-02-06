@@ -1,5 +1,5 @@
 .Header {
-width: 100vw;
+    width: 100vw;
     height: 100px;
     padding: 24px 48px;
     display: flex;
@@ -7,7 +7,6 @@ width: 100vw;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    background-color: red;
 }
 
 .Header img {
