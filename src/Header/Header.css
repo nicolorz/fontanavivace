@@ -7,6 +7,7 @@
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    background-color: #f6f6f6;
 }
 
 .Header img {
