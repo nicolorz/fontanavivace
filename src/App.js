@@ -8,11 +8,11 @@ function App() {
   const [count, setCount] = useState(1);
 
   const counterUp = () => {
-   setCount(2);
+    setCount(count + 1);
   } 
 
   const counterDown = () => {
-    setCount(0);
+    setCount(count - 1);
   }
 
   const counterReset = () => {
