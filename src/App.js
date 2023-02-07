@@ -4,7 +4,21 @@ import './App.css';
 import Header from './Header/Header';
 
 function App() {
-   const [count, setCount] = useState(1)
+
+  const [count, setCount] = useState(1);
+
+  const counterUp = () => {
+   setCount(2);
+  } 
+
+  const counterDown = () => {
+    setCount(0);
+  }
+
+  const counterReset = () => {
+    setCount(1);
+  }
+
   return (
     <div className="App">
       <Header />
@@ -15,9 +29,9 @@ function App() {
         conto: {count}      
       </div>
       <div>
-        <button>aumenta di 1</button>
-        <button>diminuisci di 1</button>
-        <button>resetta</button>
+        <button onClick={counterUp}>aumenta di 1</button>
+        <button onClick={counterDown}>diminuisci di 1</button>
+        <button onClick={counterReset}>resetta</button>
       </div>
     </div>
   );
