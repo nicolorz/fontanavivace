@@ -7,18 +7,6 @@ function App() {
 
   const [count, setCount] = useState(1);
 
-  const counterUp = () => {
-    setCount(count + 1);
-  } 
-
-  const counterDown = () => {
-    setCount(count - 1);
-  }
-
-  const counterReset = () => {
-    setCount(1);
-  }
-
   return (
     <div className="App">
       <Header />
@@ -29,9 +17,9 @@ function App() {
         conto: {count}      
       </div>
       <div>
-        <button onClick={counterUp}>aumenta di 1</button>
-        <button onClick={counterDown}>diminuisci di 1</button>
-        <button onClick={counterReset}>resetta</button>
+        <button onClick={() => {setCount(count + 1)}}>aumenta di 1</button>
+        <button onClick={() => {setCount(count - 1)}}>diminuisci di 1</button>
+        <button onClick={() => {setCount(1)}}>resetta</button>
       </div>
     </div>
   );
