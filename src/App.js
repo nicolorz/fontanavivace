@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header/Header';
@@ -6,8 +6,15 @@ import Header from './Header/Header';
 function App() {
 
   const [count, setCount] = useState(1);
+  const [effect,setEffect] = useState('niente');
+  const [prevCount,setPrev] = useState(0);
+
+  useEffect(() => {
+    setEffect('il conteggio precedente era ' + prevCount)
+  }, [prevCount])
 
   const handleCounter = (val) => {
+    setPrev(count)
     if ( val === 0 ) {
       setCount(1);
       return
@@ -18,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <div>{effect}</div>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />        
       </header> */}
