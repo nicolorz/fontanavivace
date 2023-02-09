@@ -7,6 +7,21 @@ function App() {
 
   const [count, setCount] = useState(1);
 
+  const handleCounter = (par) => {
+    switch (par) {
+      case 'add':
+        setCount(count + 1);
+        break;
+      case 'dim':
+        setCount(count - 1);
+        break;
+      case 'reset':
+      default:
+        setCount(1);
+        break;
+    }
+  }
+ 
   return (
     <div className="App">
       <Header />
@@ -14,12 +29,12 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />        
       </header> */}
       <div>
-        conto: {count}      
+        conto: {count}     
       </div>
       <div>
-        <button onClick={() => {setCount(count + 1)}}>aumenta di 1</button>
-        <button onClick={() => {setCount(count - 1)}}>diminuisci di 1</button>
-        <button onClick={() => {setCount(1)}}>resetta</button>
+        <button onClick={() => {handleCounter('add')}}>aumenta di 1</button>
+        <button onClick={() => {handleCounter('dim')}}>diminuisci di 1</button>
+        <button onClick={() => {handleCounter('reset')}}>resetta</button>
       </div>
     </div>
   );
