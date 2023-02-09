@@ -7,19 +7,12 @@ function App() {
 
   const [count, setCount] = useState(1);
 
-  const handleCounter = (par) => {
-    switch (par) {
-      case 'add':
-        setCount(count + 1);
-        break;
-      case 'dim':
-        setCount(count - 1);
-        break;
-      case 'reset':
-      default:
-        setCount(1);
-        break;
+  const handleCounter = (val) => {
+    if ( val === 0 ) {
+      setCount(1);
+      return
     }
+    setCount(count + val);
   }
  
   return (
@@ -32,9 +25,9 @@ function App() {
         conto: {count}     
       </div>
       <div>
-        <button onClick={() => {handleCounter('add')}}>aumenta di 1</button>
-        <button onClick={() => {handleCounter('dim')}}>diminuisci di 1</button>
-        <button onClick={() => {handleCounter('reset')}}>resetta</button>
+        <button onClick={() => {handleCounter(1)}}>aumenta di 1</button>
+        <button onClick={() => {handleCounter(-1)}}>diminuisci di 1</button>
+        <button onClick={() => {handleCounter(0)}}>resetta</button>
       </div>
     </div>
   );
